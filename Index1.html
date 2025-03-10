@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greenleaf Organics</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #f8f8f8;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      background-image: url('https://th.bing.com/th/id/OIG3.q8b_.8MP_4NwIFAjy.uA?pid=ImgGn&r=0&o=5&dpr=1.3');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .product {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .product img {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-container {
+      width: 80%;
+      margin: 20px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .leaf {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('leaf.png'); /* Use the external image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .map-container iframe {
+      margin: 10px;
+    }
+
+    .contact-us {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    /* three.js container styles */
+    #threejs-container {
+      width: 80%;
+      height: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Fresh & Local</h1>
+      <p>Discover the best of the season.</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://th.bing.com/th/id/OIG4.nYdGv188TCQTNDhuiX5W?pid=ImgGn" alt="Product Image">
+    <h2>Our Featured Product</h2>
+    <p>Delicious and healthy organic produce.</p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="https://th.bing.com/th/id/OIG3.8mid478vdl5SklKLj8HQ?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Image 1">
+      <img src="https://th.bing.com/th/id/OIG3.bHSX013yxbMviwXoK70W?pid=ImgGn" alt="Image 2">
+      <img src="https://th.bing.com/th/id/OIG3.UOFDsXjZ78LD7rn_cZJl?pid=ImgGn" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.526058424122!2d78.33880187581157!3d17.434517901444405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939dae6eb775%3A0x1f7a5db82bcfdfe1!2sIndian%20School%20of%20Business%2C%20ISB%20Rd%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500111!5e0!3m2!1sen!2sin!4v1741251395601!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.459521639535!2d-73.9851300845946!3d40.74881707932635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd14945e85514f884!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1701234567890!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div class="youtube-container"> 
+    <iframe width="704" height="396" src="https://www.youtube.com/embed/HC52RrASIak" title="Top 10 Reasons to Eat Organic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid03314pW22ZK8JkMEJXhMG9bEQVh4oTmR7MLe6Pob56SF6zHJtMxamLVk76LzAjAS5il%26id%3D61573767850457&show_text=true&width=500" width="500" height="665" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+  <div class="contact-us">
+    <h2>Contact Us</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJYboMkGj9aBmV1W4nD18QQzjX2V56CtjOWYLCKmRwOLjPgg/viewform?embedded=true" width="640" height="747" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <div id="threejs-container"></div> 
+
+  <script type="module">
+    import * as THREE from 'https://cdn.skypack.dev/three@0.137.5';
+    import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.137.5/examples/jsm/loaders/GLTFLoader.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+    const loader = new GLTFLoader();
+    loader.load('path/to/your/model.glb', function (gltf) { // Replace with your model path
+      const model = gltf.scene;
+      scene.add(model);
+    });
+
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      scene.traverse(function (object) {
+        if (object instanceof THREE.Mesh) {
+          object.rotation.y += 0.01;
+        }
+      });
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    function createLeaf() {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+      leaf.style.left = `${Math.random() * 100}vw`;
+      leaf.style.animationDelay = `${Math.random() * 5}s`;
+      leaf.style.opacity = Math.random();
+      leaf.style.transform = `rotate(${Math.random() * 360}deg)`;
+      document.body.appendChild(leaf);
+
+      setTimeout(() => {
+        leaf.remove();
+      }, 5000);
+    }
+
+    setInterval(createLeaf, 200);
+
+    const carousel = document.querySelector('.carousel');
+    let counter = 0;
+    const slideWidth = document.querySelector('.carousel img').clientWidth;
+
+    function slide() {
+      carousel.style.transform = `translateX(${-slideWidth * counter}px)`;
+    }
+
+    setInterval(() => {
+      counter++;
+      if (counter === 3) {
+        counter = 0;
+      }
+      slide();
+    }, 3000);
+  </script>
+
+</body>
+</html>
